@@ -1,0 +1,51 @@
+body {
+    background-color:lightgoldenrodyellow;
+    font-family: Tahoma, Arial, sans-serif;
+    padding: 50px;
+}
+
+.border {
+    border-color: blueviolet;
+    border-style: double;
+    border-width: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+    font: 32px Garamond, Helvetica, serif;
+}
+
+h2 {
+    color: blueviolet;
+    font: 32px Garamond, Helvetica, serif;
+}
+
+table {
+    width: 50%;
+    padding: 10px 50px;
+    margin: 10px 100px;
+    background-color: white;
+}
+
+thead {
+    text-align: left;
+}
+
+label {
+    display: block;
+}
+
+#submit-btn {
+    display: block;
+    background-color: purple;
+    color: white;
+}
+
+#name {
+    background-color: yellow;
+}
+
+section {
+    padding: 50px;
+}

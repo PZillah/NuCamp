@@ -1,0 +1,63 @@
+body {
+    background-image: linear-gradient(lavender,purple,blue);
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+h2:hover {
+    color: purple;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    background-image: radial-gradient(white, grey);
+    color: blue;
+    font-size: 20px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+section {
+    border: solid gray 5px;
+    background: whitesmoke;
+    display: block;
+    padding: 20px;
+    margin: 200px;
+}
+
+ul {
+    padding-left: 250px;
+    padding-right: 200px;
+}
+.profile-photo:hover {
+    box-shadow: 10px 10px 40px 10px cornflowerblue;
+}
+
+.profile-photo {
+    margin-left: 450px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.audio {
+    margin-left: 400px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    background: white;
+    font-size: 20px;
+}
+
+.link1 {
+    padding-left: 275px;
+}
