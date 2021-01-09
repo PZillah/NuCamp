@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Removing Nodes Demo</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li>Chicago Bulls</li>
+        <li>Portland Trail Blazers</li>
+        <li>Miami Heat</li>
+        <li>Phoenix Suns</li>
+    </ul>
+
+    <button type="button" onclick="removeListFirstChild()">Remove list first child with removeChild()</button>
+    <button type="button" onclick="removeAllListChildren()">Remove all list children with removeChild()</button>
+    <button type="button" onclick="removeList()">Remove entire list with remove()</button>
+    <button type="button" onclick="insertNewElement()">Add new list item</button>
+    <button type="button" onclick="insertNewText()">Add new list text</button>
+    <button type="button" onclick="resetList()">Reset list</button>
+    <button type="button" onclick="removeEveryOtherChild()">Remove every other child</button>
+
+    <p>Reload the page to reset the DOM and bring the list back.</p> 
+
+    <script>
+        const listNode = document.querySelector('#myList');
+        const childNode = listNode.childNodes;
+
+        function removeListFirstChild() {
+            //listNode.removeChild(listNode.firstChild);  with every other click, this removes text white space before the list child node
+            listNode.removeChild(listNode.firstElementChild); //with one click, this removes the list child node first
+        }
+
+        function removeAllListChildren() {
+            while (listNode.firstChild) {
+                listNode.removeChild(listNode.firstChild);
+            }
+        }
+        
+        function removeList() {
+            listNode.remove();
+        }
+        /*extra challenge: 
+        - create a node and adding it to demo code then delete it
+        - create an html reset button when clicked creates the list again as if I refreshed the page
+        - use a loop to go thru all child nodes and remove every other child
+        */
+        
+        function insertNewElement() {
+            const newEl = document.createElement('li');
+            //listNode.insertBefore(newEl, listNode.firstChild);
+            listNode.appendChild(newEl);
+        }
+        function insertNewText() {
+            const newText = document.createTextNode(' Warriors');
+            listNode.lastElementChild.appendChild(newText);
+        }
+
+        function resetList() {
+            location.reload();
+        }
+
+        function removeEveryOtherChild() {
+            for (let i=0; i < listNode.length; i+=2) {
+                childNode[i].removeChild(listNode.firstElementChild);
+            }
+        }
+    </script>
+</body>
+</html>

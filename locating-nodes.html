@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Locating Nodes Demo</title>
+    <style>
+        p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Locating Nodes Demo</h1>
+    <p id="textToChange">Click on a button to change the color of this text.</p>
+    <button type="button" onclick="changeColor1()">Use DOM traversal</button>
+    <button type="button" onclick="changeColor2()">Use getElementsByTagName</button>
+    <button type="button" onclick="changeColor3()">Use getElementById</button>
+    <button type="button" onclick="changeColor4()">Use querySelector</button>
+
+    <script>
+        function changeColor1() {
+            //document.childNodes[1].childNodes[2].childNodes[3].style.color = 'red';
+            const firstChild = document.childNodes[1]
+            const secondChild = document.childNodes[1].childNodes
+            const thirdChild = document.childNodes[1].childNodes[2].childNodes[3]
+            console.log(firstChild);
+            console.log(secondChild);
+            console.log(thirdChild);
+        }
+
+        function changeColor2() {
+            document.getElementsByTagName('p')[0].style.color = 'orange';
+        }
+
+        function changeColor3() {
+            document.getElementById('textToChange').style.color = 'blue';
+        }
+
+        function changeColor4() {
+            const x = document.querySelectorAll('button');
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.background = 'pink';
+            }
+            //const x = document.querySelectorAll('button');
+            //Array.from(x).forEach(button => {
+	        //button.style.background = 'red';
+        //} 
+            //document.querySelector('#textToChange').style.color = 'green';
+            //document.querySelector('p + button').style.background = 'blue';
+            //document.querySelector('p + button').hidden = true;
+        }
+    </script>
+</body>
+</html>
+-->
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>getElementsByTagName example</title>
+  <script>
+    function getAllParaElems() {
+      var allParas = document.getElementsByTagName('p');
+      var num = allParas.length;
+      alert('There are ' + num + ' paragraph in this document');
+    }
+
+    function div1ParaElems() {
+      var div1 = document.getElementById('div1');
+      var div1Paras = div1.getElementsByTagName('p');
+      var num = div1Paras.length;
+      alert('There are ' + num + ' paragraph in #div1');
+    }
+
+    function div2ParaElems() {
+      var div2 = document.getElementById('div2');
+      var div2Paras = div2.getElementsByTagName('p');
+      var num = div2Paras.length;
+      alert('There are ' + num + ' paragraph in #div2');
+    }
+  </script>
+</head>
+<body style="border: solid green 3px">
+  <p>Some outer text</p>
+  <p>Some outer text</p>
+
+  <div id="div1" style="border: solid blue 3px">
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+    <p>Some div1 text</p>
+
+    <div id="div2" style="border: solid red 3px">
+      <p>Some div2 text</p>
+      <p>Some div2 text</p>
+    </div>
+  </div>
+
+  <p>Some outer text</p>
+  <p>Some outer text</p>
+
+  <button onclick="getAllParaElems();">
+    show all p elements in document</button><br />
+
+  <button onclick="div1ParaElems();">
+    show all p elements in div1 element</button><br />
+
+  <button onclick="div2ParaElems();">
+    show all p elements in div2 element</button>
+
+</body>
+</html>
+-->
